@@ -24,7 +24,7 @@ Professional portfolio website for Ania Kowalska, a Spanish teacher. The project
 1. Clone the repository.
 2. Open `index.html` or start a server: `python3 -m http.server 8000`.
 
-> **Note**: This website was created in the **Wibecoding** style using the **Google Antigravity** tool.
+> **Note**: This website was created in the **Vibecoding** style using the **Google Antigravity** tool.
 
 ---
 
@@ -48,7 +48,7 @@ Profesjonalna strona wizytówka nauczycielki języka hiszpańskiego, Anii Kowals
 1. Sklonuj repozytorium.
 2. Otwórz `index.html` lub uruchom serwer: `python3 -m http.server 8000`.
 
-> **Note**: Strona została stworzona w stylu **Wibecodingu** przy użyciu narzędzia **Google Antigravity**.
+> **Note**: Strona została stworzona w stylu **Vibecodingu** przy użyciu narzędzia **Google Antigravity**.
 
 ---
 
