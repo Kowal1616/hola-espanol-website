@@ -337,8 +337,22 @@
         lucide.createIcons();
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Dziękujemy za wiadomość! Odezwiemy się wkrótce.');
-            this.reset();
+
+            const form = this;
+            const formData = new FormData(form);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+                .then(() => {
+                    alert('Dziękujemy za wiadomość! Odezwiemy się wkrótce.');
+                    form.reset();
+                })
+                .catch((error) => {
+                    alert('Wystąpił błąd przy wysyłaniu formularza. Spróbuj ponownie.');
+                });
         });
     </script>
 
