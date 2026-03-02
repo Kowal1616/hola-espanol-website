@@ -56,7 +56,8 @@
     <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="container">
             <a class="navbar-brand" href="#">
-                ¡Hola <span class="logo-span">Español!</span> | Ania Dybowska-Komosa
+                ¡Hola <span class="logo-span">Español!</span><span class="d-none d-lg-inline"> | Ania
+                    Dybowska-Komosa</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -305,9 +306,16 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-md-6 border-md-end border-white border-opacity-10 py-3">
                                 <h5 class="fw-bold mb-4">Zadzwoń do mnie:</h5>
-                                <a href="tel:+48123456789" class="phone-link d-block mb-3">
-                                    <i data-lucide="phone" class="me-2"></i> +48 123 456 789
-                                </a>
+                                <div id="phone-container">
+                                    <button id="reveal-phone-btn" onclick="revealPhone()"
+                                        class="btn w-100 py-2 fw-bold shadow-sm"
+                                        style="background-color: var(--accent-turquoise); color: var(--primary-navy); border: none; transition: filter 0.2s;"
+                                        onmouseover="this.style.filter='brightness(0.9)'"
+                                        onmouseout="this.style.filter='brightness(1)'">
+                                        <i data-lucide="phone-call" class="me-2" style="width:18px;"></i> Pokaż numer
+                                        telefonu
+                                    </button>
+                                </div>
                             </div>
                             <div class="col-md-6 py-3">
                                 <h5 class="fw-bold mb-4">Wyślij wiadomość:</h5>
@@ -360,6 +368,20 @@
     <!-- Initialize Lucide Icons & Contact Form Alert -->
     <script>
         lucide.createIcons();
+
+        // Anti-bot phone reveal: number stored reversed
+        function revealPhone() {
+            const reversed = '676 925 554 84+';
+            const phone = reversed.split('').reverse().join('');
+            const container = document.getElementById('phone-container');
+            container.innerHTML =
+                '<a href="tel:' + phone.replace(/\s/g, '') + '" class="phone-link d-block mb-3">' +
+                '<i data-lucide="phone" class="me-2"></i>' +
+                '<span style="direction:rtl;unicode-bidi:bidi-override;">' + reversed + '</span>' +
+                '</a>';
+            lucide.createIcons();
+        }
+
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
