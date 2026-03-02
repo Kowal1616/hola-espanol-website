@@ -56,7 +56,7 @@
     <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="container">
             <a class="navbar-brand" href="#">
-                ¡Hola <span class="logo-span">Español!</span><span class="d-none d-lg-inline"> | Ania
+                ¡Hola <span class="logo-span">Español!</span><span class="d-block d-lg-inline"> | Ania
                     Dybowska-Komosa</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -287,7 +287,7 @@
             <div class="text-center mt-5">
                 <div class="badge bg-soft text-navy px-4 py-3 rounded-pill fs-6 fw-normal">
                     <i data-lucide="gift" class="text-turquoise me-2" style="width: 20px;"></i>
-                    Pierwsza lekcja próbna jest zawsze <strong>GRATIS</strong>!
+                    Pierwsza lekcja <strong>GRATIS</strong>!
                 </div>
             </div>
         </div>
@@ -306,9 +306,9 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-md-6 border-md-end border-white border-opacity-10 py-3">
                                 <h5 class="fw-bold mb-4">Zadzwoń do mnie:</h5>
-                                <div id="phone-container">
+                                <div id="phone-container" class="text-center">
                                     <button id="reveal-phone-btn" onclick="revealPhone()"
-                                        class="btn w-100 py-2 fw-bold shadow-sm"
+                                        class="btn py-2 px-4 fw-bold shadow-sm"
                                         style="background-color: var(--accent-turquoise); color: var(--primary-navy); border: none; transition: filter 0.2s;"
                                         onmouseover="this.style.filter='brightness(0.9)'"
                                         onmouseout="this.style.filter='brightness(1)'">
@@ -355,8 +355,10 @@
     <footer class="text-center bg-white">
         <div class="container">
             <div class="mb-4">
-                <a href="#" class="navbar-brand text-navy">¡Hola <span class="logo-span">Español!</span> | Ania
-                    Dybowska-Komosa</a>
+                <a href="#" class="navbar-brand text-navy">
+                    ¡Hola <span class="logo-span">Español!</span>
+                    <span class="d-block d-sm-inline">| Ania Dybowska-Komosa</span>
+                </a>
             </div>
             <p class="text-secondary small">© 2026 Wszystkie prawa zastrzeżone.</p>
         </div>
@@ -374,11 +376,23 @@
             const reversed = '676 925 554 84+';
             const phone = reversed.split('').reverse().join('');
             const container = document.getElementById('phone-container');
-            container.innerHTML =
-                '<a href="tel:' + phone.replace(/\s/g, '') + '" class="phone-link d-block mb-3">' +
-                '<i data-lucide="phone" class="me-2"></i>' +
-                '<span style="direction:rtl;unicode-bidi:bidi-override;">' + reversed + '</span>' +
-                '</a>';
+            const isMobile = window.innerWidth < 992;
+
+            if (isMobile) {
+                // Mobile: clickable tel: link
+                container.innerHTML =
+                    '<a href="tel:' + phone.replace(/\s/g, '') + '" class="phone-link d-block mb-3">' +
+                    '<i data-lucide="phone" class="me-2"></i>' +
+                    '<span style="direction:rtl;unicode-bidi:bidi-override;">' + reversed + '</span>' +
+                    '</a>';
+            } else {
+                // Desktop: plain static text, no link, no tel: action
+                container.innerHTML =
+                    '<p class="phone-link d-block mb-3" style="cursor:default;text-decoration:none;">' +
+                    '<i data-lucide="phone" class="me-2"></i>' +
+                    '<span style="direction:rtl;unicode-bidi:bidi-override;">' + reversed + '</span>' +
+                    '</p>';
+            }
             lucide.createIcons();
         }
 
