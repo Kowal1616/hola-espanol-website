@@ -90,14 +90,15 @@ body {
     bottom: -20px;
     right: -10px;
     font-family: 'Reenie Beanie', cursive;
-    /* User's specific "handwritten" choice */
-    font-size: 2.8rem;
-    /* Increased size (+2 numbers from 2.2rem) */
+    font-size: 3.5rem;
+    /* +25% from 2.8rem */
     color: var(--primary-navy);
     transform: rotate(-5deg);
     background: white;
-    padding: 5px 15px;
-    border-radius: 10px;
+    padding: 6px 19px;
+    /* +25% from 5px 15px */
+    border-radius: 13px;
+    /* +25% from 10px */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
@@ -167,14 +168,8 @@ body {
 }
 
 .testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 4rem;
-    color: var(--bg-soft);
-    font-family: serif;
-    line-height: 1;
+    content: '';
+    display: none;
 }
 
 /* Contact Section */
