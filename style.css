@@ -85,23 +85,7 @@ body {
     transform: scale(1.02);
 }
 
-.signature {
-    position: absolute;
-    bottom: -20px;
-    right: -10px;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 3.5rem;
-    /* +25% from 2.8rem */
-    color: var(--primary-navy);
-    transform: rotate(-5deg);
-    background: white;
-    padding: 6px 19px;
-    /* +25% from 5px 15px */
-    border-radius: 13px;
-    /* +25% from 10px */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-}
+
 
 /* Feature Cards */
 .feature-card {
@@ -206,7 +190,5 @@ footer {
         font-size: 2.5rem;
     }
 
-    .signature {
-        font-size: 1.4rem;
-    }
+
 }
