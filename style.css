@@ -73,17 +73,14 @@ body {
 .teacher-img-wrapper {
     position: relative;
     z-index: 1;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px rgba(0, 51, 102, 0.1);
 }
 
 .teacher-img {
     border-radius: 30px;
-    box-shadow: 20px 20px 60px rgba(0, 51, 102, 0.1);
-    transition: transform 0.5s ease;
 }
 
-.teacher-img:hover {
-    transform: scale(1.02);
-}
 
 
 
