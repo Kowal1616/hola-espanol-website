@@ -1,6 +1,6 @@
 :root {
     --primary-navy: #003366;
-    --accent-turquoise: #40E0D0;
+    --accent-turquoise: #007373; /* Darkened for accessibility (WCAG AA) */
     --text-dark: #1A1A1A;
     --text-light: #F8F9FA;
     --bg-light: #FFFFFF;
@@ -151,6 +151,23 @@ body {
 .testimonial-card::before {
     content: '';
     display: none;
+}
+
+/* Carousel Indicators Accessibility */
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: var(--accent-turquoise) !important;
+    opacity: 0.5 !important;
+    border: none !important;
+    margin: 0 12px !important;
+    padding: 16px !important; /* Total size approx 44x44px (12+16+16) */
+    box-sizing: content-box !important;
+}
+
+.carousel-indicators .active {
+    opacity: 1 !important;
 }
 
 /* Contact Section */
