@@ -48,6 +48,18 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .placeholder-white::placeholder {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        @media (min-width: 768px) {
+            .border-md-end {
+                border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -116,7 +128,7 @@
                         <div class="feature-icon-box bg-light mb-3">
                             <i data-lucide="heart" class="text-turquoise"></i>
                         </div>
-                        <h4 class="fw-bold mb-3 text-navy">Moje Podejście</h4>
+                        <h3 class="h4 fw-bold mb-3 text-navy">Moje Podejście</h3>
                         <ul class="list-unstyled">
                             <li class="mb-3 d-flex align-items-start">
                                 <i data-lucide="check-circle" class="text-turquoise me-3 mt-1"
@@ -146,7 +158,7 @@
                         <div class="feature-icon-box bg-light mb-3">
                             <i data-lucide="award" class="text-turquoise"></i>
                         </div>
-                        <h4 class="fw-bold mb-3 text-navy">Kompetencje i Doświadczenie</h4>
+                        <h3 class="h4 fw-bold mb-3 text-navy">Kompetencje i Doświadczenie</h3>
                         <ul class="list-unstyled">
                             <li class="mb-3 d-flex align-items-start">
                                 <i data-lucide="check-circle" class="text-turquoise me-3 mt-1"
@@ -190,7 +202,7 @@
                                         Polecam lekcje z Anią - stosuje dużo różnorodnych pomocy np podcasty, gry,
                                         scenki itp. Atmosfera jest przyjazna i wspierająca naukę :)
                                     </p>
-                                    <h6 class="fw-bold text-navy mb-0">Maria</h6>
+                                    <h3 class="h6 fw-bold text-navy mb-0">Maria</h3>
                                     <small class="text-secondary">Poziom B1</small>
                                 </div>
                             </div>
@@ -202,7 +214,7 @@
                                         wymagająca, ale też bardzo miła i życzliwa. Wszystkie materiały do nauki są
                                         przygotowywane i wysyłane na bierząco. Serdecznie polecam korepetycje każdemu,
                                         kto skutecznie chce się nauczyć hiszpańskiego.</p>
-                                    <h6 class="fw-bold text-navy mb-0">Emilia</h6>
+                                    <h3 class="h6 fw-bold text-navy mb-0">Emilia</h3>
                                     <small class="text-secondary">Nauka od zera</small>
                                 </div>
                             </div>
@@ -218,7 +230,7 @@
                                         tłumaczona w sposób uporządkowany. Anna jest świetną nauczycielką - polecam
                                         wszystkim, którzy chcą nauczyć się hiszpańskiego solidnie i w miłej atmosferze.
                                         PS. Z matury rozszerzonej miałam 92%!</p>
-                                    <h6 class="fw-bold text-navy mb-0">Marysia</h6>
+                                    <h3 class="h6 fw-bold text-navy mb-0">Marysia</h3>
                                     <small class="text-secondary">Przygotowanie do matury (B2)</small>
                                 </div>
                             </div>
@@ -227,7 +239,7 @@
                                     <p class="mb-4 text-secondary">Od początku złapaliśmy dobry kontakt. Pani Ania
                                         wszystko cierpliwie tłumaczy i nie zanudza samymi ćwiczeniami z gramatyki.
                                         Zacząłem lubić hiszpański :)</p>
-                                    <h6 class="fw-bold text-navy mb-0">Krzysiek</h6>
+                                    <h3 class="h6 fw-bold text-navy mb-0">Krzysiek</h3>
                                     <small class="text-secondary">Przygotowanie do matury</small>
                                 </div>
                             </div>
@@ -246,7 +258,7 @@
                                         próbuje naprowadzić na poprawną odpowiedź, co lepiej pomaga zrozumieć dane
                                         zagadnienie.
                                         Polecam serdecznie :)</p>
-                                    <h6 class="fw-bold text-navy mb-0">Asia</h6>
+                                    <h3 class="h6 fw-bold text-navy mb-0">Asia</h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -260,7 +272,7 @@
                                         następnie bardziej złożonych, rozmów. Teraz, już chwilę po powrocie, kontynuuję
                                         wspólne lekcje, żeby nie zapomnieć tego co już potrafię i móc uczyć się dalej.
                                         Mega polecam!</p>
-                                    <h6 class="fw-bold text-navy mb-0">Aneta</h6>
+                                    <h3 class="h6 fw-bold text-navy mb-0">Aneta</h3>
                                     <small class="text-secondary">Poziom B1</small>
                                 </div>
                             </div>
@@ -352,7 +364,7 @@
 
                         <div class="row g-4 align-items-center">
                             <div class="col-md-6 border-md-end border-white border-opacity-10 py-3">
-                                <h5 class="fw-bold mb-4">Zadzwoń do mnie:</h5>
+                                <h3 class="h5 fw-bold mb-4">Zadzwoń do mnie:</h3>
                                 <div id="phone-container" class="text-center">
                                     <button id="reveal-phone-btn" onclick="revealPhone()"
                                         class="btn py-2 px-4 fw-bold shadow-sm"
@@ -365,11 +377,11 @@
                                 </div>
                             </div>
                             <div class="col-md-6 py-3">
-                                <h5 class="fw-bold mb-4">Wyślij wiadomość:</h5>
+                                <h3 class="h5 fw-bold mb-4">Wyślij wiadomość:</h3>
                                 <form id="contact-form" class="text-start" data-netlify="true" name="contact"
                                     netlify-honeypot="bot-field">
                                     <div class="d-none">
-                                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
                                     </div>
                                     <div class="mb-3">
                                         <input type="text" name="name"
@@ -463,18 +475,7 @@
                 });
         });
     </script>
-
-    <style>
-        .placeholder-white::placeholder {
-            color: rgba(255, 255, 255, 0.6) !important;
-        }
-
-        @media (min-width: 768px) {
-            .border-md-end {
-                border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
-            }
-        }
-    </style>
 </body>
 
 </html>
+```

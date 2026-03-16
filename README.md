@@ -13,6 +13,7 @@ Professional portfolio website for Ania Dybowska-Komosa, a Spanish teacher. The 
 - **Branding**: Custom color palette (Navy & Turquoise) and personal signature (Reenie Beanie font).
 - **Interactivity**: Auto-switching student testimonials carousel.
 - **Optimization**: Clean code, modern typography, and Lucide icons.
+- **Standards Compliance**: HTML structure optimized for W3C standards (correct heading hierarchy, styles in head).
 
 ### 🛠 Tech Stack
 - HTML5 / CSS3
@@ -37,6 +38,7 @@ Profesjonalna strona wizytówka nauczycielki języka hiszpańskiego, Anii Dybows
 - **Branding**: Indywidualna paleta barw (Navy & Turquoise) oraz personalny podpis (Reenie Beanie).
 - **Interaktywność**: Automatyczna karuzela z opiniami uczniów.
 - **Optymalizacja**: Lekki kod, nowoczesna typografia i ikony Lucide.
+- **Zgodność ze standardami**: Struktura HTML zoptymalizowana pod kątem standardów W3C (poprawna hierarchia nagłówków, style w sekcji head).
 
 ### 🛠 Technologie
 - HTML5 / CSS3
