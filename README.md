@@ -6,7 +6,7 @@
 
 ## 🚀 Project Performance & Quality
 
-Strona została zoptymalizowana pod kątem wydajności, dostępności i bezpieczeństwa, osiągając topowe wyniki w branżowych testach:
+The website has been optimized for performance, accessibility, and security, achieving top scores in industry-standard benchmarks:
 
 | Tool | Result | Status |
 | :--- | :--- | :--- |
@@ -15,11 +15,6 @@ Strona została zoptymalizowana pod kątem wydajności, dostępności i bezpiecz
 | **WAVE Accessibility** | **0 Errors** | ![Accessibility](https://img.shields.io/badge/Accessibility-Passed-blue) |
 | **DeadLinkChecker** | **0 Dead Links** | ![Links](https://img.shields.io/badge/Links-Clean-blue) |
 | **PageSpeed Insights** | **Mobile & Desktop Optimized** | ![Speed](https://img.shields.io/badge/UX-Fast-orange) |
-
-### Główne usprawnienia techniczne:
-- **Performance:** Inlining krytycznego CSS, asynchroniczne ładowanie czcionek i frameworków, optymalizacja obrazów WebP (Retina-ready).
-- **Security:** Pełna implementacja Content Security Policy (CSP), X-Frame-Options oraz X-Content-Type-Options.
-- **Accessibility:** Pełna zgodność z WCAG (poprawne etykiety formularzy, kontrast, nawigacja klawiaturą).
 
 ---
 
@@ -33,6 +28,11 @@ Professional portfolio website for Ania Dybowska-Komosa, a Spanish teacher. The 
 - **Interactivity**: Auto-switching student testimonials carousel.
 - **Optimization**: Clean code, modern typography, and Lucide icons.
 - **Standards Compliance**: HTML structure optimized for W3C standards (correct heading hierarchy, styles in head).
+
+### 🛡️ Technical Improvements
+- **Performance:** Critical CSS inlining, asynchronous loading of fonts and frameworks, WebP image optimization (Retina-ready).
+- **Security:** Full implementation of Content Security Policy (CSP), X-Frame-Options, and X-Content-Type-Options.
+- **Accessibility:** Full WCAG compliance (correct form labels, high contrast, keyboard navigation).
 
 ### 🛠 Tech Stack
 - HTML5 / CSS3
@@ -58,6 +58,11 @@ Profesjonalna strona wizytówka nauczycielki języka hiszpańskiego, Anii Dybows
 - **Interaktywność**: Automatyczna karuzela z opiniami uczniów.
 - **Optymalizacja**: Lekki kod, nowoczesna typografia i ikony Lucide.
 - **Zgodność ze standardami**: Struktura HTML zoptymalizowana pod kątem standardów W3C (poprawna hierarchia nagłówków, style w sekcji head).
+
+### 🛡️ Usprawnienia techniczne
+- **Performance:** Inlining krytycznego CSS, asynchroniczne ładowanie czcionek i frameworków, optymalizacja obrazów WebP (Retina-ready).
+- **Security:** Pełna implementacja Content Security Policy (CSP), X-Frame-Options oraz X-Content-Type-Options.
+- **Accessibility:** Pełna zgodność z WCAG (poprawne etykiety formularzy, kontrast, nawigacja klawiaturą).
 
 ### 🛠 Technologie
 - HTML5 / CSS3
