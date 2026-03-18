@@ -360,17 +360,20 @@
                                         <label>Don't fill this out if you're human: <input name="bot-field"></label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="name"
+                                        <label for="name" class="visually-hidden">Imię</label>
+                                        <input type="text" name="name" id="name"
                                             class="form-control bg-transparent text-white placeholder-white border-white border-opacity-25 py-2 shadow-none"
                                             placeholder="Twoje imię" required>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" name="email"
+                                        <label for="email" class="visually-hidden">E-mail</label>
+                                        <input type="email" name="email" id="email"
                                             class="form-control bg-transparent text-white placeholder-white border-white border-opacity-25 py-2 shadow-none"
                                             placeholder="Twój e-mail" required>
                                     </div>
                                     <div class="mb-3">
-                                        <textarea name="message"
+                                        <label for="message" class="visually-hidden">Wiadomość</label>
+                                        <textarea name="message" id="message"
                                             class="form-control bg-transparent text-white placeholder-white border-white border-opacity-25 py-2 shadow-none"
                                             rows="3" placeholder="W czym mogę pomóc?" required></textarea>
                                     </div>
