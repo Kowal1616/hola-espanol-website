@@ -203,6 +203,60 @@ footer {
     .hero-title {
         font-size: 2.5rem;
     }
+}
 
+/* Helper Classes & Overrides from index.html */
+.placeholder-white::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
 
+@media (min-width: 768px) {
+    .border-md-end {
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+.btn-navy-bg {
+    background-color: var(--primary-navy) !important;
+    border: none !important;
+}
+
+.btn-navy-border {
+    border-color: var(--primary-navy) !important;
+}
+
+.teacher-img-max-height {
+    max-height: 500px;
+}
+
+.turquoise-line-custom {
+    width: 80px;
+    height: 4px;
+    background: var(--accent-turquoise);
+    border-radius: 2px;
+}
+
+.icon-small {
+    width: 18px !important;
+    min-width: 18px !important;
+}
+
+.icon-medium {
+    width: 20px !important;
+}
+
+.btn-turquoise-custom {
+    background-color: var(--accent-turquoise) !important;
+    color: #ffffff !important;
+    border: none !important;
+    transition: filter 0.2s !important;
+}
+
+.btn-turquoise-custom:hover {
+    filter: brightness(0.9);
+}
+
+.reversed-text {
+    direction: rtl;
+    unicode-bidi: bidi-override;
 }

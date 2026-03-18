@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide) {
         window.lucide.createIcons();
     }
+    
+    // Reveal animations on scroll
+    initScrollAnimations();
 });
 
 // Smooth scroll for navigation links
@@ -22,46 +25,86 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Submission (Mockup)
+// Anti-bot phone reveal: number stored reversed
+function revealPhone() {
+    const reversed = '676 925 554 84+';
+    const phone = reversed.split('').reverse().join('');
+    const container = document.getElementById('phone-container');
+    const isMobile = window.matchMedia("(max-width: 991px)").matches;
+
+    if (isMobile) {
+        // Mobile: clickable tel: link
+        container.innerHTML =
+            '<a href="tel:' + phone.replace(/\s/g, '') + '" class="phone-link d-block mb-3">' +
+            '<i data-lucide="phone" class="me-2"></i>' +
+            '<span class="reversed-text">' + reversed + '</span>' +
+            '</a>';
+    } else {
+        // Desktop: plain static text, no link, no tel: action
+        container.innerHTML =
+            '<p class="phone-link d-block mb-3" style="cursor:default;text-decoration:none;">' +
+            '<i data-lucide="phone" class="me-2"></i>' +
+            '<span class="reversed-text">' + reversed + '</span>' +
+            '</p>';
+    }
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
+}
+
+// Contact Form Submission (Netlify)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Visual feedback
-        const submitBtn = contactForm.querySelector('button');
+        const form = this;
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
 
         submitBtn.textContent = 'Wysyłanie...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-            alert('Dziękuję za zgłoszenie! Skontaktuję się z Tobą wkrótce.');
-            contactForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        })
+            .then(() => {
+                alert('Dziękujemy za wiadomość! Odezwiemy się wkrótce.');
+                form.reset();
+            })
+            .catch((error) => {
+                console.error('Form submission error:', error);
+                alert('Wystąpił błąd przy wysyłaniu formularza. Spróbuj ponownie.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
     });
 }
 
 // Reveal animations on scroll
-const observerOptions = {
-    threshold: 0.1
-};
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s ease-out';
+        observer.observe(section);
     });
-}, observerOptions);
-
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'all 0.8s ease-out';
-    observer.observe(section);
-});
+}
