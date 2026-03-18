@@ -260,3 +260,8 @@ footer {
     direction: rtl;
     unicode-bidi: bidi-override;
 }
+
+.phone-link-static {
+    cursor: default;
+    text-decoration: none;
+}

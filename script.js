@@ -42,7 +42,7 @@ function revealPhone() {
     } else {
         // Desktop: plain static text, no link, no tel: action
         container.innerHTML =
-            '<p class="phone-link d-block mb-3" style="cursor:default;text-decoration:none;">' +
+            '<p class="phone-link d-block mb-3 phone-link-static">' +
             '<i data-lucide="phone" class="me-2"></i>' +
             '<span class="reversed-text">' + reversed + '</span>' +
             '</p>';
