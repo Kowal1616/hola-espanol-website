@@ -35,7 +35,7 @@
 
     <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" media="print" onload="this.media='all'">
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -44,10 +44,273 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&family=Reenie+Beanie&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS (Inlined for Performance) -->
+    <style>
+:root {
+    --primary-navy: #003366;
+    --accent-turquoise: #007373; /* Darkened for accessibility (WCAG AA) */
+    --text-dark: #1A1A1A;
+    --text-light: #F8F9FA;
+    --bg-light: #FFFFFF;
+    --bg-soft: #EEF2F7;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: 0 10px 30px rgba(0, 51, 102, 0.08);
+    --shadow-hover: 0 20px 40px rgba(0, 51, 102, 0.12);
+}
+
+body {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+}
+
+/* Custom Utilities */
+.text-navy {
+    color: var(--primary-navy);
+}
+
+.text-turquoise {
+    color: var(--accent-turquoise);
+}
+
+.bg-soft {
+    background-color: var(--bg-soft);
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--primary-navy) !important;
+}
+
+.navbar-brand .logo-span {
+    color: var(--accent-turquoise);
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    color: var(--text-dark) !important;
+}
+
+.nav-link:hover {
+    color: var(--accent-turquoise) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #ffffff 0%, #eef2f7 100%);
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.teacher-img-wrapper {
+    position: relative;
+    z-index: 1;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px rgba(0, 51, 102, 0.1);
+}
+
+.teacher-img {
+    border-radius: 30px;
+}
+
+
+
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    height: 100%;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-turquoise);
+}
+
+.feature-icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-soft);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: var(--accent-turquoise);
+}
+
+/* Pricing Section */
+.pricing-card {
+    border: none;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-turquoise);
+}
+
+.amount span {
+    font-size: 1.2rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '';
+    display: none;
+}
+
+/* Carousel Indicators Accessibility */
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: var(--accent-turquoise) !important;
+    opacity: 0.5 !important;
+    border: none !important;
+    margin: 0 12px !important;
+    padding: 16px !important; /* Total size approx 44x44px (12+16+16) */
+    box-sizing: content-box !important;
+}
+
+.carousel-indicators .active {
+    opacity: 1 !important;
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--primary-navy);
+    color: white;
+    padding: 100px 0;
+}
+
+.contact-card {
+    background: transparent;
+    /* Removed blue background */
+    border-radius: 30px;
+    padding: 50px;
+    border: none;
+    /* Removed border */
+}
+
+.phone-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Helper Classes & Overrides from index.html */
+.placeholder-white::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+@media (min-width: 768px) {
+    .border-md-end {
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+.btn-navy-bg {
+    background-color: var(--primary-navy) !important;
+    border: none !important;
+}
+
+.btn-navy-border {
+    border-color: var(--primary-navy) !important;
+}
+
+.teacher-img-max-height {
+    max-height: 500px;
+}
+
+.turquoise-line-custom {
+    width: 80px;
+    height: 4px;
+    background: var(--accent-turquoise);
+    border-radius: 2px;
+}
+
+.icon-small {
+    width: 18px !important;
+    min-width: 18px !important;
+}
+
+.icon-medium {
+    width: 20px !important;
+}
+
+.btn-turquoise-custom {
+    background-color: var(--accent-turquoise) !important;
+    color: #ffffff !important;
+    border: none !important;
+    transition: filter 0.2s !important;
+}
+
+.btn-turquoise-custom:hover {
+    filter: brightness(0.9);
+}
+
+.reversed-text {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+    </style>
 
     <!-- Lucide Icons -->
 </head>
@@ -62,7 +325,7 @@
                     Dybowska-Komosa</span>
             </a>
             <button class="navbar-toggler d-lg-none d-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-label="Przełącz nawigację">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="navbarNav">
