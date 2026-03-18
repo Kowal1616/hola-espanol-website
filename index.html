@@ -37,9 +37,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Fonts: Outfit, Inter, Dancing Script -->
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
@@ -108,7 +110,7 @@
                 <div class="col-lg-5 text-center text-lg-end">
                     <div class="teacher-img-wrapper d-inline-block">
                         <img src="images/teacher.webp" alt="Ania Dybowska-Komosa - Nauczycielka Hiszpańskiego"
-                            class="img-fluid teacher-img" style="max-height: 500px;" width="309" height="500">
+                            class="img-fluid teacher-img" style="max-height: 500px;" width="309" height="500" fetchpriority="high">
 
                     </div>
                 </div>
@@ -432,14 +434,16 @@
 
     <!-- Initialize Lucide Icons & Contact Form Alert -->
     <script defer>
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
 
         // Anti-bot phone reveal: number stored reversed
         function revealPhone() {
             const reversed = '676 925 554 84+';
             const phone = reversed.split('').reverse().join('');
             const container = document.getElementById('phone-container');
-            const isMobile = window.innerWidth < 992;
+            const isMobile = window.matchMedia("(max-width: 991px)").matches;
 
             if (isMobile) {
                 // Mobile: clickable tel: link
