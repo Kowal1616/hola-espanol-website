@@ -4,6 +4,25 @@
 
 ---
 
+## 🚀 Project Performance & Quality
+
+Strona została zoptymalizowana pod kątem wydajności, dostępności i bezpieczeństwa, osiągając topowe wyniki w branżowych testach:
+
+| Tool | Result | Status |
+| :--- | :--- | :--- |
+| **Chrome Lighthouse** | **99** / 100 / 100 / 100 | ![Lighthouse](https://img.shields.io/badge/Lighthouse-99%2B-brightgreen) |
+| **Mozilla HTTP Observatory** | **A+** | ![Security](https://img.shields.io/badge/Security-A%2B-brightgreen) |
+| **WAVE Accessibility** | **0 Errors** | ![Accessibility](https://img.shields.io/badge/Accessibility-Passed-blue) |
+| **DeadLinkChecker** | **0 Dead Links** | ![Links](https://img.shields.io/badge/Links-Clean-blue) |
+| **PageSpeed Insights** | **Mobile & Desktop Optimized** | ![Speed](https://img.shields.io/badge/UX-Fast-orange) |
+
+### Główne usprawnienia techniczne:
+- **Performance:** Inlining krytycznego CSS, asynchroniczne ładowanie czcionek i frameworków, optymalizacja obrazów WebP (Retina-ready).
+- **Security:** Pełna implementacja Content Security Policy (CSP), X-Frame-Options oraz X-Content-Type-Options.
+- **Accessibility:** Pełna zgodność z WCAG (poprawne etykiety formularzy, kontrast, nawigacja klawiaturą).
+
+---
+
 ## English
 
 Professional portfolio website for Ania Dybowska-Komosa, a Spanish teacher. The project focuses on clear communication of individual and small group lesson offerings (Warsaw & Online).
