@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Reveal animations on scroll
     initScrollAnimations();
+
+    // Phone reveal handler
+    const revealBtn = document.getElementById('reveal-phone-btn');
+    if (revealBtn) {
+        revealBtn.addEventListener('click', revealPhone);
+    }
 });
 
 // Smooth scroll for navigation links
