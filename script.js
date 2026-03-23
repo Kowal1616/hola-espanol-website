@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Anti-bot phone reveal: number stored reversed
 function revealPhone() {
-    const reversed = '676 925 554 84+';
+    const reversed = '427 086 805 84+';
     const phone = reversed.split('').reverse().join('');
     const container = document.getElementById('phone-container');
     const isMobile = window.matchMedia("(max-width: 991px)").matches;
